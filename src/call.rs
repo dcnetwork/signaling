@@ -16,7 +16,7 @@ pub async fn start_signal(address:Vec<u8>){
     let client_opt = ClientOptions::parse("mongodb+srv://dcsignal:dcsignal%40n1@cluster0.l8joh.mongodb.net/SigBuffer?retryWrites=true&w=majority",).await.unwrap();
     let client = Client::with_options(client_opt).unwrap();
 
-    let client_addr = "Thor";//hex::encode(address);
+    let client_addr = hex::encode(address);
     //
     tokio::spawn(async move {
         //
