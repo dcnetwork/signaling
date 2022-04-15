@@ -1,6 +1,6 @@
 use mongodb::{bson::doc, options::ClientOptions, Client};
 use mongodb::bson;
-use signaling::call::call::*;
+use signaling::call::*;
 #[tokio::main]
 
 async fn main() -> mongodb::error::Result<()> {
