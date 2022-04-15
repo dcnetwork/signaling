@@ -921,6 +921,7 @@ name = "signaling"
 version = "0.1.0"
 dependencies = [
  "chrono",
+ "hex",
  "mongodb",
  "serde",
  "tokio",
