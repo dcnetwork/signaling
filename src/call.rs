@@ -50,7 +50,7 @@ pub async fn start_signal(address:Vec<u8>){
                 }
             }
         }
-    }).await;
+    });
 }
 
 // list of database call types and function
@@ -103,7 +103,7 @@ pub async fn push_text_call( to: String, from: String, pubkey: String ) -> bool 
     let client = Client::with_options(client_opt).unwrap();
     //
     let buffer = client.database("SigBuffer").collection::<Document>("buffer");
-
+    //
     let serialized = bson::to_bson(&call_this_person).unwrap();
     // convert to document
     let document = serialized.as_document().unwrap();
